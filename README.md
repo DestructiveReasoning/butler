@@ -1,6 +1,6 @@
-### Butler
+# Butler
 
 A CLI tool to manage your to-dos.
 
-## USAGE
+### USAGE
 butler <category> <task> {options}
