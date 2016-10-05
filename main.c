@@ -3,6 +3,7 @@
 #include <string.h>
 #include "calendar.h"
 #include "activity.h"
+#include "data.h"
 
 struct tm *tm;
 
@@ -72,6 +73,18 @@ int prompt_createActivity(void) {
 int main(int argc, char **argv) {
 	if(argc < 2) {
 		printf("USAGE: butler <category> {options}\n");
+		LinkedList *list = createLinkedList(NULL);
+		addToFront(list,(void *)42);
+		addToFront(list,(void *)23);
+		addToFront(list,(void *)16);
+		addToFront(list,(void *)15);
+		addToFront(list,(void *)8);
+		addToFront(list,(void *)4);
+		printLinkedList(list);
+		removeFirst(list);
+		removeFirst(list);
+		removeFirst(list);
+		printLinkedList(list);
 		return 1;
 	}
 	if (strcmp(argv[1],"calendar") == 0) {
