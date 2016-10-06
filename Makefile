@@ -1,2 +1,2 @@
 all:
-	gcc *.c -o butler
+	gcc *.c data/*.c -o butler

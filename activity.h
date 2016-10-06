@@ -7,6 +7,7 @@
 #include <ctype.h>
 #include <time.h>
 #include "constants.h"
+#include "data/linkedlist.h"
 
 typedef struct {
 	char *name;
@@ -20,5 +21,7 @@ Activity *createActivity(char *name, char *time, char *location, char *date, cha
 void printActivity(Activity *);
 void formatDate(char *, char *);
 int isValidDate(char *);
+
+LinkedList *loadActivities(void);
 
 #endif
